@@ -130,7 +130,6 @@ public:
 	void setup(const ofGLFWWindowSettings & settings);
 	void update();
 	void draw();
-	void run(ofBaseApp * appPtr);
 	bool getWindowShouldClose();
 	void setWindowShouldClose();
 
@@ -174,6 +173,8 @@ public:
 
     int         getPixelScreenCoordScale();
 
+    void 		makeCurrent();
+
 #if defined(TARGET_LINUX) && !defined(TARGET_RASPBERRY_PI)
 	Display* 	getX11Display();
 	Window  	getX11Window();
@@ -215,7 +216,6 @@ private:
 	static void		scroll_cb(GLFWwindow* windowP_, double x, double y);
 	static void 	drop_cb(GLFWwindow* windowP_, int numFiles, const char** dropString);
 	static void		error_cb(int errorCode, const char* errorDescription);
-	static void 	exitApp();
 
 #ifdef TARGET_LINUX
 	void setWindowIcon(const string & path);

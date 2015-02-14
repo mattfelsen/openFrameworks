@@ -21,9 +21,8 @@ public:
 	virtual void setup(const ofWindowSettings & settings)=0;
 	virtual void update()=0;
 	virtual void draw()=0;
-	virtual void run(ofBaseApp * appPtr) {}
 	virtual bool getWindowShouldClose(){
-		return events().windowShouldClose();
+		return false;
 	}
 	virtual void setWindowShouldClose(){
 		close();
@@ -66,6 +65,8 @@ public:
 	virtual void	setVerticalSync(bool enabled){};
     virtual void    setClipboardString(const string& text) {}
     virtual string  getClipboardString() { return ""; }
+
+    virtual void makeCurrent(){};
 
     virtual void * getWindowContext(){return NULL;};
 
