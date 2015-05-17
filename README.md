@@ -4,6 +4,7 @@
 openFrameworks is a C++ toolkit for creative coding.  If you are new to OF, welcome!
 
 
+
 folder structure
 --------
 
